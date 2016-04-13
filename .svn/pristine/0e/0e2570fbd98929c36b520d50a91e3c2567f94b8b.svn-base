@@ -1,0 +1,4 @@
+<div class="list-news">
+    <?php echo $cate['description']; ?>
+
+</div>

@@ -1,0 +1,13 @@
+body{background: #fae8f2}
+nav { background: rgba(0, 0, 0, 0) url("../img/bg_menu.png") repeat-x scroll 0 0;height: 40px;  border-radius: 3px}
+nav  a{color:#fff;font-weight: bold}
+img{width: 100%;height: auto}
+.copyright.text-center > p{background: #ff6f6f;padding: 10px;margin: 0;color:#fff}
+.copyright.text-center > p a{color:#fff}
+.nav > li > a:focus, .nav > li > a:hover {
+    background-color: #f44062;
+    text-decoration: none;
+    color:#fff
+}
+.nav > li > a{border-right: 1px solid crimson}
+.nav > li:last-child a{border-right: none}

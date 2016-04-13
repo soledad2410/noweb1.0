@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates>
+    <info>
+        <title>Giao diện chính website</title>
+         <description>
+             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+          </description>
+         <version>1.0</version>
+         <date>04-09-2015</date>
+         <copyright>vcc</copyright>
+         <type>desktop</type>
+    </info>
+<layouts>
+    <layout>
+        <name>default</name>
+        <title>Layout mặc định</title>
+        <description>Giao diện mặc định hệ thống</description>
+        <positions>
+             <position>
+                <name>nav_main</name>
+                <title>Vị trí danh mục chính</title>
+
+			</position>
+            <position>
+                <name>slideshow</name>
+                <title>Vị trí slideshow</title>
+            </position>
+
+            <position>
+                <name>bottom_content</name>
+                <title>Vị trí cuối trang</title>
+            </position>
+    </positions>
+    </layout>
+
+     <layout>
+        <name>home</name>
+        <title>Layout mặc định trang chủ</title>
+        <description>Giao diện mặc định hệ thống</description>
+        <positions>
+             <position>
+                <name>top_nav_mobile</name>
+                <title>Vị trí danh mục trên cùng bản mobile</title>
+            </position>
+            <position>
+                <name>slideshow_mobile</name>
+                <title>Vị trí slideshow bản mobile</title>
+            </position>
+
+            <position>
+                <name>bottom_content_mobile</name>
+                <title>Vị trí dưới bản mobile</title>
+            </position>
+    	</positions>
+    </layout>
+</layouts>
+<pages>
+	<page>
+		<name>product_details</name>
+		<title>Trang danh mục tin tức</title>
+	</page>
+        <page>
+        <name>news_details</name>
+        <title>Trang chi tiết tin tức</title>
+    </page>
+	<page>
+		<name>home_index</name>
+		<title>Trang chủ</title>
+	</page>
+	<page>
+		<name>news_cate</name>
+		<title>Trang danh mục tin tức</title>
+	</page>
+</pages>
+
+</templates>

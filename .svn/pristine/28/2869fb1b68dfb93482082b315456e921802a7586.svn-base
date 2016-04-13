@@ -1,0 +1,21 @@
+.center{text-align: center}
+select{color:#797979!important;}
+.w3{width: 3%}.w5{width: 5%}
+.w6{width: 6%}
+.form-control.transparent{background: transparent;border: none;color: inherit}
+.w10{width: 10%}.w15{width: 15%}.w20{width: 20%}.w25{width: 25%}.w30{width: 30%}.w35{width: 35%}.w40{width: 40%}.w45{width: 45%}.w50{width: 50%}.w55{width: 55%}.w60{width: 60%}.w65{width: 65%}.w75{width: 75%}.w80{width: 80%}.w85{width: 85%}.w90{width: 90%}.w95{width: 95%}.w100{width: 100%}
+td.center.open-detail span{  display: inline-block;  background: url("img/details_open.png") no-repeat;width: 20px;height: 20px;  cursor: pointer; vertical-align: middle;  }
+td.center.open-detail.close-detail span, .fa-icon-close {background: url("img/details_close.png") no-repeat;width: 20px;height: 20px; display: inline-block; }
+td.sort{cursor: pointer;}
+.form-inline.navbar-right{padding:7.5px}
+span.icon-doc{display: inline-block;background: url("img/word.png") no-repeat transparent!important;height: 24px;width: 24px;vertical-align: middle;margin-right: 5px}
+span.icon-xls{display: inline-block;background: url("img/xls.png") no-repeat transparent!important;height: 24px;width: 24px;vertical-align: middle;margin-right: 5px}
+span.icon-png{display: inline-block;background: url("img/png.png") no-repeat transparent!important;height: 24px;width: 24px;vertical-align: middle;margin-right: 5px}
+span.icon-csv{display: inline-block;background: url("img/csv.png") no-repeat transparent!important;height: 24px;width: 24px;vertical-align: middle;margin-right: 5px}
+.panel-primary > .panel-heading{background: #7087a3!important;}
+tr.selected{background: #F5F5F5}
+header.panel-heading.blue{background: #7087a3!important;color: #fff!important;}
+.tree-separator{border-bottom: 1px dashed;vertical-align: middle;display: inline-block}
+.require{color: red}
+.brandlogo img{max-height: 120px}
+.product-suggest-wrap{position: relative}

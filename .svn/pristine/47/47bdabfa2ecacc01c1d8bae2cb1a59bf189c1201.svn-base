@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates>
+<layouts>
+    <layout>
+        <name>default</name>
+        <title>Layout mặc định</title>
+        <description>Giao diện mặc định hệ thống</description>
+        <positions>
+             <position>
+                <name>nav_main</name>
+                <title>Vị trí danh mục chính</title>
+            </position>
+            <position>
+                <name>slideshow</name>
+                <title>Vị trí slideshow</title>
+            </position>
+
+            <position>
+                <name>bottom_content</name>
+                <title>Vị trí cuối trang</title>
+            </position>
+    </positions>
+    </layout>
+
+     <layout>
+        <name>home</name>
+        <title>Layout mặc định trang chủ</title>
+        <description>Giao diện mặc định hệ thống</description>
+        <positions>
+             <position>
+                <name>top_nav_mobile</name>
+                <title>Vị trí danh mục trên cùng bản mobile</title>
+            </position>
+            <position>
+                <name>slideshow_mobile</name>
+                <title>Vị trí slideshow bản mobile</title>
+            </position>
+
+            <position>
+                <name>bottom_content_mobile</name>
+                <title>Vị trí dưới bản mobile</title>
+            </position>
+    	</positions>
+    </layout>
+
+</layouts>
+
+<pages>
+	<page>
+		<name>product_details</name>
+		<title>Trang danh mục tin tức</title>
+	</page>
+        <page>
+        <name>news_details</name>
+        <title>Trang danh mục tin tức</title>
+    </page>
+	<page>
+		<name>home_index</name>
+		<title>Trang chủ</title>
+	</page>
+	<page>
+		<name>cart_index</name>
+		<title>Trang danh mục tin tức</title>
+	</page>
+</pages>
+</templates>

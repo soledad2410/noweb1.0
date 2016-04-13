@@ -1,0 +1,85 @@
+<?php
+/**
+ *
+ */
+namespace Noweb\Cp;
+use \Noweb\Cp\Category;
+use \Noweb\Cp\DomainService;
+use \Noweb\Cp\LayoutService;
+use \Noweb\Cp\Themes;
+use \Noweb\Cp\Widget;
+
+class TemplateController extends BaseController {
+	public function index() {
+		$domainService = new DomainService();
+		$layoutService = new LayoutService();
+
+		$domainId = $domainService->getDomain()->id;
+
+		$installedThemes = Themes::where('domain_id', '=', $domainId)->get()->toArray();
+		$themes = [];
+		foreach ($installedThemes as $theme) {
+			$themes[] = $theme['name'];
+		}
+		$allThemes = $layoutService->loadThemes();
+		$this->layout->meta = ['title' => 'Trang quản lý template website'];
+		$this->layout->content = \View::make($this->default_view)
+			->with([
+				'installedThemes' => $themes,
+				'allThemes' => $allThemes,
+			]);
+	}
+
+	public function widget() {
+
+		$domainService = new DomainService();
+
+		$domainId = $domainService->getDomain()->id;
+
+		$currentThemes = Themes::where('domain_id', '=', $domainId)->where('active', '=', 1)->first()->toArray();
+
+		$widgetObj = new Widget();
+		$allWidget = $widgetObj->loadWidgetsByTheme($currentThemes['id']);
+
+		$this->layout->meta = ['title' => 'Trang quản lý cây thư mục website'];
+		$this->layout->content = \View::make($this->default_view)
+			->with([
+				'allWidget' => $allWidget,
+			]);
+	}
+
+	public function navigation() {
+		$cateObj = new Category();
+		$domain = new DomainService();
+
+		$categories = Category::where('domain_id', '=', $domain->getDomain()->id)
+			->where('language_id', '=', $this->current_language->id)
+			->where(function ($query) {
+				if (\Input::has('type') && \Input::get('type') != 'all') {
+					$query->where('type', '=', \Input::get('type'));
+				}
+			})
+			->orderby('order_num', 'ASC')->get();
+
+		$catesArray = $categories->toArray();
+		$trees = $cateObj->buildHierarchicalCategories($catesArray, 0);
+
+		$this->layout->meta = ['title' => 'Trang quản lý cây thư mục website'];
+		$this->layout->content = \View::make($this->default_view)
+			->with([
+				'CateTrees' => $cateObj->generateNestableTrees($trees),
+			]);
+
+		// Process ajax request
+		if (\Input::has('menu') && is_array(\Input::get('menu'))) {
+			if ($cateObj->saveCateOrder(\Input::get('menu'))) {
+				return \Response::json(['code' => 'success', 'msg' => 'Lưu thành công!']);
+			} else {
+				return \Response::json(['code' => 'error', 'msg' => 'Không thể lưu các thay đổi, xin thử lại']);
+			}
+
+		}
+	}
+}
+
+?>

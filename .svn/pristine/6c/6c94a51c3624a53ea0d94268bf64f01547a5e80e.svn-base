@@ -1,0 +1,27 @@
+{
+    "name": "noweb/cp",
+    "description": "CP package of noweb - client project",
+    "authors": [
+        {
+            "name": "ZL",
+            "email": "smtpwebmails@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "illuminate/support": "4.2.*"
+    },
+    "autoload": {
+        "classmap": [
+            "src/migrations",
+            "src/controllers",
+            "src/models",
+            "src/services",
+            "src/helpers"
+        ],
+        "psr-0": {
+            "Noweb\\Cp\\": "src/"
+        }
+    },
+    "minimum-stability": "stable"
+}

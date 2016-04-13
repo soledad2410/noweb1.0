@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widgets>
+	<widget>
+	    <name>news</name>
+	    <title>Khối tin tức website</title>
+	    <description>Khối hiển thị danh sách tin tức</description>
+	   			<config>
+					<name>limit</name>
+					<title>Số lượng hiển thị tối đa</title>
+					<type>number</type>
+					<default>6</default>
+				</config>
+				<config>
+					<name>type</name>
+					<title>Loại tin tức hiển thị</title>
+					<type>selectbox</type>
+					<values>
+					    <title>Tin mới nhất</title>
+					    <value>latest</value>
+					</values>
+					<values>
+					    <title>Tin hot nhất</title>
+					    <value>hot</value>
+					</values>
+					<values>
+					    <title>Tin xem nhiều nhất</title>
+					    <value>most_view</value>
+					</values>
+				</config>
+	</widget>
+	<widget>
+	    <name>product</name>
+	    <title>Khối sản  phẩm website</title>
+	    <description>Khối hiển thị danh sách sản phẩm</description>
+	   			<config>
+					<name>limit</name>
+					<title>Số lượng hiển thị tối đa</title>
+					<type>number</type>
+					<default>6</default>
+				</config>
+				<config>
+					<name>type</name>
+					<title>Loại sản phẩm hiển thị</title>
+					<type>selectbox</type>
+					<values>
+					    <title>Sản phẩm mới nhất</title>
+					    <value>latest</value>
+					</values>
+					<values>
+					    <title>Sản phẩm hot nhất</title>
+					    <value>hot</value>
+					</values>
+					<values>
+					    <title>Sản phẩm nhiều nhất</title>
+					    <value>most_view</value>
+					</values>
+				</config>
+	</widget>
+	<widget>
+	    <name>media</name>
+	    <title>Khối nội dung media website</title>
+	    <description>Khối hiển thị danh sách media website</description>
+	</widget>
+</widgets>

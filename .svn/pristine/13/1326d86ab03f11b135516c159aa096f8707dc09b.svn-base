@@ -1,0 +1,22 @@
+<div class="page-head">
+	<h1><a href="<?php echo $url->get_news_url($news); ?>"><?php echo $news->name; ?></a></h1>
+	<span class="datetime">(<?php echo dateFormat($news->published_time); ?>)</span>
+</div>
+<div class="page-body">
+	<?php echo $news->content; ?>
+
+</div>
+<div class="social">
+
+</div>
+<div class="related-posts">
+	<div class="title">Tin liên quan</div>
+	<ul class="list-news">
+		<?php foreach($relatedNews as $item): ?>
+		<li>
+			<i class="icon icon-arrow-right"></i>
+			<a href="<?php echo $url->get_news_url($item); ?>"><?php echo $item->name; ?><span class="date">(<?php echo dateFormat($news->published_time); ?>)</span></a>
+		</li>
+		<?php endforeach; ?>
+	</ul>
+</div>

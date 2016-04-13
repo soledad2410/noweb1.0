@@ -1,0 +1,56 @@
+
+/* vietnamese */
+@font-face {
+    font-family: 'Open Sans';
+    font-weight: 400;
+    src: url(opensans_normal.woff2) format('woff2');
+}
+/* vietnamese */
+@font-face {
+    font-family: 'Open Sans';
+
+    font-weight: 700;
+    src:  url(opensans_bold.woff2) format('woff2');
+
+}
+#container{width: 980px}
+*{font-family: 'Open Sans', sans-serif;}
+a:hover{text-decoration: none}
+li{list-style: none;display: inline-block}
+p,ul{margin: 0 }
+ul{padding: 0}
+body{background: url('../img/body-bg.jpg') no-repeat fixed center top;background-size: cover;}
+
+.content-site{width: 100%;height: 165px;display: inline-block;margin-top: 20px;background: url('../img/apple_box.png') repeat-x rgba(255, 255, 255, 0.75);
+border: 0 solid rgba(212, 211, 211, 1);padding: 20px;
+
+}
+a.site-logo{display: inline-block;float:left;margin-top: -10px}
+a.site-logo img{width: 90px;height: auto}
+a.cart-checkout{  background-color: rgba(142, 158, 80, 1);
+    display: inline-block;
+    border: 0 solid rgba(142, 158, 80, 1);
+     color:#fff;
+   box-sizing: border-box;
+    direction: ltr;
+    height: 30px;
+ width: 165px;text-align: center;line-height: 30px;
+    white-space: nowrap;
+    float: right;
+}
+a.cart-checkout:hover{    background-color: rgba(181, 190, 143, 1);
+    border-color: rgba(181, 190, 143, 1);
+    transition: border-color 0.4s ease 0s, background-color 0.4s ease 0s;}
+#content{height: auto}
+ul.main-nav{width: 100%;text-align: center;background: rgba(217, 190, 174, 1);    border: 0 solid transparent; white-space: nowrap;}
+ul.main-nav li{   height: 35px;
+    overflow: visible;
+    position: relative;
+    width: 148px;}
+ul.main-nav li a{color:#6a4835;font-size: 13px;line-height: 35px;text-transform: uppercase;font-family: Arial, Helvetica, sans-serif;display: inline-block}
+.top-header{width: 100%;display: inline-block}
+ul.main-nav li:hover{background-color: rgba(180, 151, 135, 1);  transition: background-color 0.4s ease 0s;}
+ul.main-nav li:hover a{color:#fff}
+.latest-product .item-product{float: left;width: 33.33%}
+.latest-product .item-product .p-img{float:left;display: inline-block}
+.latest-product .item-product .p-name{color:#5f6935}

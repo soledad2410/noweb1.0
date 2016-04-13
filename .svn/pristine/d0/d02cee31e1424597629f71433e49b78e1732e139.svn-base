@@ -1,0 +1,15 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: hung_it
+ * Date: 09/03/2015
+ * Time: 3:34 CH
+ */
+
+namespace Noweb\Cp;
+
+class WidgetType extends BaseModel {
+
+	protected $table = 'widget_type';
+	public $timestamps = false;
+}

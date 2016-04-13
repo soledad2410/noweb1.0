@@ -1,0 +1,41 @@
+.col-total-widgets
+{
+	border-right: 1px solid #e3e3e3;
+}
+
+.col-total-widgets strong
+{
+	font-size: 72px;
+	color: #ff0c2e;
+}
+
+.col-total-widgets span
+{
+	font-size: 24px;
+
+}
+
+.col-one-stats
+{
+	padding: 10px 20px 10px 20px;
+	color: #898989;
+	border-bottom: 1px solid #e3e3e3;
+}
+
+.col-one-stats strong
+{
+	margin-right: 10px;
+	font-size: 24px;
+}
+
+.col-two-stats
+{
+	padding: 10px 20px 10px 20px;
+	color: #898989;	
+}
+
+.col-two-stats strong
+{
+	margin-right: 10px;
+	font-size: 18px;
+}

@@ -1,0 +1,27 @@
+<div id="content" class="content-site">
+    <div class="product-cate">
+        <?php foreach($products as $item): ?>
+        <div class="item-product col-md-4 text-center">
+            <a class="p-img" href="<?php echo $url->get_product_url($item); ?>" title="<?php echo $item->name; ?>">
+                <img src="<?php echo $url->get_thumbnail($item); ?>" alt="<?php echo $item->name; ?>" title="<?php echo $item->name; ?>">
+            </a>
+            <a class="p-name" href="<?php echo $url->get_product_url($item); ?>" title="<?php echo $item->name; ?>">
+                <?php echo $item->name; ?>
+
+            </a>
+            <p class="p-summary"><?php echo $item->brief; ?></p>
+        </div>
+        <?php endforeach; ?>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-5">
+        <div class="dataTables_info"> Hiển thị <strong><?php echo $range['from']; ?></strong> - <strong><?php echo $range['to']; ?></strong> / <strong><?php echo $range['totalRecord']; ?></strong> bản ghi</div>
+    </div>
+    <div class="page-navigation col-lg-7">
+        <div class="paging">
+            <?php echo $paginator; ?>
+
+        </div>
+    </div>
+</div>

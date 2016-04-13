@@ -1,0 +1,230 @@
+<link rel="stylesheet" type="text/css" href="{{$resources_path}}/assets/morris.js-0.4.3/morris.css">
+<section>
+    <!--state overview start-->
+    <div class="row state-overview" data-rel="modules">
+        <div class="item" module-rel="news">
+            <section class="panel">
+                <div class="symbol terques">
+                    <i class="icon-pencil"></i>
+                </div>
+                <div class="value">
+                    <h1 class="count"></h1>
+                    <p>Bài viết</p>
+                </div>
+            </section>
+        </div>
+        <div class="item" module-rel="album">
+            <section class="panel">
+                <div class="symbol red">
+                    <i class="icon-camera-retro"></i>
+                </div>
+                <div class="value">
+                    <h1 class="count2"></h1>
+                    <p>Ảnh &amp; Video</p>
+                </div>
+            </section>
+        </div>
+        <div class="item" module-rel="product">
+            <section class="panel">
+                <div class="symbol yellow">
+                    <i class="icon-suitcase"></i>
+                </div>
+                <div class="value">
+                    <h1 class=" count3"></h1>
+                    <p>Sản phẩm</p>
+                </div>
+            </section>
+        </div>
+        <div class="item" module-rel="cart">
+            <section class="panel">
+                <div class="symbol blue">
+                    <i class="icon-shopping-cart"></i>
+                </div>
+                <div class="value">
+                    <h1 class=" count4"></h1>
+                    <p>Đơn hàng</p>
+                </div>
+            </section>
+        </div>
+    </div>
+    <!--state overview end-->
+    <div class="row">
+        <div class="col-lg-4">
+            <!--user info table start-->
+            <section class="panel">
+                <div class="panel-body progress-panel">
+                    <div class="task-progress">
+                        <h1>Thống kê</h1>
+                        <p>Số lượt truy cập website</p>
+                    </div>
+                </div>
+                <table class="table table-hover personal-task">
+                    <tbody>
+                        <tr>
+                            <td colspan="2">
+                                <p class="text-center">Đang online</p>
+                                <p class="text-center"><span class="badge bg-important"><span class="users_online"></span></span></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Hôm nay</td>
+                            <td> <span class="badge">{{$visits['daily']}}</span></td>
+                        </tr>
+                        <tr>
+                            <td>Tuần này</td>
+                            <td> <span class="badge bg-info">{{$visits['weekly']}}</span></td>
+                        </tr>
+                        <tr>
+                            <td>Tháng này</td>
+                            <td> <span class="badge bg-success">{{$visits['monthly']}}</span></td>
+                        </tr>
+                        <tr>
+                            <td>Tất cả</td>
+                            <td> <span class="badge bg-primary">{{$visits['total']}}</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <!--user info table end-->
+        </div>
+        <div class="col-lg-8">
+            <section class="panel">
+                <div class="panel-body progress-panel">
+                    <div class="task-progress">
+                        <h1>Biểu đồ</h1>
+                        <p>Lưu lượng truy cập website</p>
+                    </div>
+                    <div class="task-option">
+                        <select class="styled" id="visitor_statistics_method">
+                            <option value="this_week">Tuần này</option>
+                            <option value="last_week">Tuần trước</option>
+                            <option value="" disabled="">---------</option>
+                            <option value="this_month">Tháng này</option>
+                            <option value="last_month">Tháng trước</option>
+                            <option value="" disabled="">---------</option>
+                            <option value="all">Toàn thời gian</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <div id="hero-area" class="graph"></div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-5">
+            {{-- List articles --}}
+            <section class="panel" id="tab_list_articles">
+                <header class="panel-heading tab-bg-dark-navy-blue">
+                    <ul class="nav nav-tabs nav-justified ">
+                        <li class="active">
+                            <a data-toggle="tab" href="#popular" onclick="get_articles('view')">
+                                Nhiều lượt xem
+                            </a>
+                        </li>
+                        <li class="">
+                            <a data-toggle="tab" href="#comments" onclick="get_articles('comments')">
+                                Nhiều bình luận
+                            </a>
+                        </li>
+                        <li class="">
+                            <a data-toggle="tab" href="#recent" onclick="get_articles('new')">
+                                Bài mới
+                            </a>
+                        </li>
+                    </ul>
+                </header>
+                <div class="panel-body">
+                    <div class="tab-content tasi-tab">
+                        <div id="popular" class="tab-pane active">
+                        </div>
+                        <div id="comments" class="tab-pane">
+                            <article class="media">
+                                <a class="pull-left thumb p-thumb">
+                                    <img src="img/product1.jpg">
+                                </a>
+                                <div class="media-body">
+                                    <a href="#" class=" p-head">Item One Tittle</a>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                </div>
+                            </article>
+                        </div>
+                        <div id="recent" class="tab-pane">
+                            <article class="media">
+                                <a class="pull-left thumb p-thumb">
+                                    <img src="img/product1.jpg">
+                                </a>
+                                <div class="media-body">
+                                    <a href="#" class=" p-head">Item One Tittle</a>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </section>
+          {{-- /List articles --}}
+      </div>
+      <div class="col-lg-7">
+        <!--Recently Comments-->
+        <section class="panel">
+            <div class="panel-body progress-panel">
+                <div class="task-progress">
+                    <h1>Bình luận</h1>
+                    <p>Danh sách bình luận mới đăng</p>
+                </div>
+            </div>
+            <div class="panel-body">
+                <div class="timeline-messages">
+                    @foreach ($comments as $item)
+                    <!-- Comment -->
+                    <div class="msg-time-chat">
+                        <a href="#" class="message-img"><img class="avatar" src="{{$resources_path}}/img/avatar-mini.jpg" alt=""></a>
+                        <div class="message-body msg-in">
+                            <span class="arrow"></span>
+                            <div class="text" @if ($item->status == 0) style="border-left: 2px solid #067; background-color: #f9f9f9;" @endif">
+                                <p class="attribution"><a href="javascript:;">{{$item->fullname}}</a> trong: <a href="">{{$item->news_title}}</a></p>
+                                <p>{{$item->content}}</p>
+                                <p class="text-right attribution">Vào lúc {{date_format(date_create($item->created_at), 'H:m, d-m-Y')}}</p>
+
+                                <p class="action">
+                                    @if ($item->status == 0)
+                                    <a title="Duyệt" data-toggle="tooltip" onclick="change_comment_status({{$item->id}}, 3)" href="javascript:;"><i class="icon-circle-arrow-up"></i></a>
+                                    @else
+                                    <a title="Bỏ duyệt" data-toggle="tooltip" onclick="change_comment_status({{$item->id}}, 0)" href="javascript:;"><i class="icon-circle-arrow-down"></i></a>
+                                    @endif
+                                    <a title="Trả lời" data-toggle="tooltip" class="delete" onclick="show_comments({{$item->id}})" href="javascript:;"><i class="icon-reply"></i></a>
+                                    <a title="Xóa" data-toggle="tooltip" class="delete" onclick="delete_comment({{$item->id}})" href="javascript:;"><i class="icon-remove"></i></a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /comment -->
+                    @endforeach
+                </div>
+            </div>
+        </section>
+        <!--/Recently Comments-->
+    </div>
+</div>
+</section>
+<!--script for this page-->
+<script>
+//owl carousel
+//custom select box
+$(function(){
+    $('select.styled').customSelect();
+});
+</script>
+<script src="{{$resources_path}}/assets/morris.js-0.4.3/morris.min.js" type="text/javascript"></script>
+<script src="{{$resources_path}}/assets/morris.js-0.4.3/raphael-min.js" type="text/javascript"></script>
+<script src="{{$resources_path}}/js/morris-script.js"></script>
+<script src="{{$resources_path}}/js/dashboard.js" type="text/javascript"></script>
+
+<script>
+    $(document).ready(function() {
+        append_chart(<?php echo $visitors?>);
+    });
+    $('div[data-rel=modules] .item').hide();
+</script>

@@ -1,0 +1,32 @@
+.panda-chat-widget
+{
+	background-color: #dd2c82;
+}
+
+.panda-chat-widget .panda-bg-blue
+{
+	background-color: #dd2c82;	
+}
+
+.panda-chat-widget .panda-loading
+{
+	background-color: #dd1f7b;		
+}
+
+.panda-chat-widget .btn-panda-default
+{
+	border:1px solid #dbdbdb;
+	background-color: #dd1f7b;
+}
+
+.panda-chat-widget .btn-panda-default:hover
+{
+	background-color: #d81372;
+}
+
+.panda-page .panda-box-chat-footer
+{
+	background-color: #dd2c82;
+		color: #ffffff;
+		padding: 5px;
+}

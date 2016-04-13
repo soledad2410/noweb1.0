@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Mosaddek">
+    <meta name="keyword" content="FlatLab, Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
+    <link rel="shortcut icon" href="<?php echo $resources_path; ?>/img/favicon.png">
+    <base href="/" />
+    <title><?php echo $meta['title']; ?></title>
+    <!-- Bootstrap core CSS -->
+    <link href="<?php echo $resources_path; ?>/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?php echo $resources_path; ?>/css/bootstrap-reset.css" rel="stylesheet">
+    <!--external css-->
+    <link href="<?php echo $resources_path; ?>/assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link href="<?php echo $resources_path; ?>/assets/jquery-easy-pie-chart/jquery.easy-pie-chart.css" rel="stylesheet" type="text/css" media="screen"/>
+    <link rel="stylesheet" href="<?php echo $resources_path; ?>/css/owl.carousel.css" type="text/css">
+      <link rel="stylesheet" type="text/css" href="<?php echo $resources_path; ?>/assets/bootstrap-datetimepicker/css/datetimepicker.css" />
+    <!-- Custom styles for this template -->
+    <link href="<?php echo $resources_path; ?>/css/style.css" rel="stylesheet">
+    <link href="<?php echo $resources_path; ?>/css/style-responsive.css" rel="stylesheet" />
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 tooltipss and media queries -->
+    <!--[if lt IE 9]>
+      <script src="<?php echo $resources_path; ?>/js/html5shiv.js"></script>
+      <script src="<?php echo $resources_path; ?>/js/respond.min.js"></script>
+    <![endif]-->
+    <script src="<?php echo $resources_path; ?>/js/jquery-1.8.3.min.js"></script>
+    <script src="<?php echo $resources_path; ?>/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="<?php echo $resources_path; ?>/js/jquery.dcjqaccordion.2.7.js"></script>
+   <script src="<?php echo $resources_path; ?>/js/jquery.scrollTo.min.js"></script>
+
+   <link rel="stylesheet" type="text/css" href="<?php echo $resources_path; ?>/assets/bootstrap-datepicker/css/datepicker.css" />
+   <link rel="stylesheet" type="text/css" href="<?php echo $resources_path; ?>/assets/bootstrap-timepicker/compiled/timepicker.css" />
+   <link rel="stylesheet" type="text/css" href="<?php echo $resources_path; ?>/assets/bootstrap-dialog/bootstrap-dialog.css" />
+
+   <script src="/public/3rd/ckfinder/ckfinder.js"></script>
+   <script src="/public/3rd/ckeditor/ckeditor.js"></script>
+   <!-- export table html -->
+   <script src="<?php echo $resources_path; ?>/assets/table-export/jquery.base64.js"></script>
+   <script src="<?php echo $resources_path; ?>/assets/table-export/tableExport.js"></script>
+   <script src="<?php echo $resources_path; ?>/assets/table-export/html2canvas.js"></script>
+   <script src="<?php echo $resources_path; ?>/assets/table-export/jspdf/libs/sprintf.js"></script>
+   <script src="<?php echo $resources_path; ?>/assets/table-export/jspdf/jspdf.js"></script>
+   <script src="<?php echo $resources_path; ?>/assets/table-export/jspdf/libs/base64.js"></script>
+   <script type="text/javascript" src="<?php echo $resources_path; ?>/js/autoNumeric.js"></script>
+   <script src="<?php echo $resources_path; ?>/js/common.js"></script>
+   <!-- Custom css -->
+     <link href="<?php echo $resources_path; ?>/common.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+  <section id="container" >
+      <!--header start-->
+      <header class="header white-bg">
+            <div class="sidebar-toggle-box">
+                <div data-original-title="Toggle Navigation" data-placement="right" class="icon-reorder tooltips"></div>
+            </div>
+            <!--logo start-->
+            <a href="/cp/dashboard" class="logo">NOWEB <span>CP</span></a>
+            <!--logo end-->
+
+            <div class="top-nav ">
+                <!--search & user info start-->
+                <ul class="nav pull-right top-menu">
+                    <li>
+                        <input type="text" class="form-control search" placeholder="Search">
+                    </li>
+                    <li class="dropdown">
+                        <a data-toggle="dropdown" class="dropdown-toggle current-language" data-value="<?php echo $current_language->id; ?>" href="javascript:;">
+                          <img alt=""  height="30" src="<?php echo $resources_path; ?>/img/flags/<?php echo $current_language->code; ?>.png">
+                          <span class="username"><?php echo $current_language->name; ?></span>
+                          </a>
+                        <ul class="dropdown-menu select-language">
+                        <?php foreach($languages as $lang): ?>
+                            <li>
+                             <a href="javascript:;" data-value="<?php echo $lang->id; ?>">
+                                <img alt=""  height="30" src="<?php echo $resources_path; ?>/img/flags/<?php echo $lang->code; ?>.png">
+                                <span class="username"><?php echo $lang->name; ?></span>
+                             </a>
+                            </li>
+                        <?php endforeach; ?>
+                        </ul>
+                    </li>
+                    <!-- user login dropdown start-->
+                    <li class="dropdown">
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                            <img alt=""  height="30" src="<?php echo $user->getAvatar(); ?>">
+                            <span class="username"><?php echo $user->username; ?></span>
+                            <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu extended logout">
+                            <div class="log-arrow-up"></div>
+                            <li><a href="/cp/profile"><i class=" icon-suitcase"></i>Profile</a></li>
+                            <li><a href="#"><i class="icon-cog"></i> Settings</a></li>
+                            <li><a href="#"><i class="icon-bell-alt"></i> Notification</a></li>
+                            <li><a href="javascript:void(0)" class="sign-out-system"><i class="icon-key"></i> Log Out</a></li>
+                        </ul>
+                    </li>
+                    <!-- user login dropdown end -->
+                </ul>
+                <!--search & user info end-->
+            </div>
+        </header>
+      <!--header end-->
+      <!--sidebar start-->
+      <aside>
+          <div id="sidebar">
+                <!--  notification start -->
+
+                <!--  notification end -->
+              <!-- sidebar menu start-->
+              <ul class="sidebar-menu" id="nav-accordion">
+
+                  <li>
+                      <a class="active" href="/cp/dashboard">
+                          <i class="icon-dashboard"></i>
+                          <span>Dashboard</span>
+                      </a>
+                  </li>
+
+                  <li class="sub-menu">
+                      <a href="javascript:;" >
+                          <i class="icon-laptop"></i>
+                          <span>Nội dung</span>
+                      </a>
+
+		        <ul class="sub">
+                    <li>
+                        <a href="/cp/category">Chuyên mục</a>
+                    </li>
+					<li class='sub-menu'>
+						<a href="/cp/news">Tin tức</a>
+						<ul class="sub">
+						<li>
+                        	<a href="/cp/news">Danh sách</a>
+                        	</li>
+
+							 <li>
+                            	<a href="/cp/news/comments">Bình luận</a>
+                            </li>
+						</ul>
+					</li>
+                    <li>
+        			    <a href="/cp/pages">Trang riêng</a>
+        			</li>
+					<li>
+						<a href="/cp/contacts">Liên hệ</a>
+					</li>
+	                <li class='sub-menu'>
+    						<a href="" >Gallery</a>
+    						<ul class="sub">
+    						<li>
+                            	<a href="/cp/products">Danh sách</a>
+                            	</li>
+    							<li>
+    								<a href="/cp/product/add">Thêm mới</a>
+    							</li>
+    							<li>
+    								<a href="/cp/product/categories">Danh mục</a>
+    							</li>
+    	                         <li>
+    								<a href="/cp/product/types">Phân loại</a>
+    							</li>
+    						</ul>
+    				</li>
+                    <li><a href="/cp/tags">Tags</a></li>
+				    </ul>
+                  </li>
+                  <li class="sub-menu">
+                      <a href="javascript:;" >
+                          <i class=" icon-bar-chart"></i>
+                          <span>Giao diện</span>
+                      </a>
+                      <ul class="sub">
+                          <li><a  href="/cp/template">Giao diện website</a></li>
+                          <li><a  href="/cp/template/navigation">Cây danh mục</a></li>
+                          <li><a  href="/cp/template/widget">Khối nội dung</a></li>
+                      </ul>
+                  </li>
+
+                  <li class="sub-menu">
+                      <a  href="javascript:;">
+                          <i class="icon-user"></i>
+                          <span>Thành viên</span>
+                      </a>
+                      <ul class="sub">
+                        <li><a href="/cp/admin">Danh sách thành viên</a> </li>
+                        <li><a href="/cp/admin/group">Nhóm thành viên</a> </li>
+                      </ul>
+                  </li>
+                  <!--multi level menu start-->
+                  <li class="sub-menu">
+                      <a href="javascript:;" >
+                          <i class="icon-sitemap"></i>
+                          <span>Thống kê - báo cáo</span>
+                      </a>
+                      <ul class="sub">
+                          <li><a  href="javascript:;">Menu Item 1</a></li>
+                          <li class="sub-menu">
+                              <a  href="boxed_page.html">Menu Item 2</a>
+                              <ul class="sub">
+                                  <li><a  href="javascript:;">Menu Item 2.1</a></li>
+                                  <li class="sub-menu">
+                                      <a  href="javascript:;">Menu Item 3</a>
+                                      <ul class="sub">
+                                          <li><a  href="javascript:;">Menu Item 3.1</a></li>
+                                          <li><a  href="javascript:;">Menu Item 3.2</a></li>
+                                      </ul>
+                                  </li>
+                              </ul>
+                          </li>
+                      </ul>
+                  </li>
+                  <li class="sub-menu">
+                      <a href="javascript:;" >
+                          <i class="icon-sitemap"></i>
+                          <span>E-commerce</span>
+                      </a>
+                      <ul class="sub">
+                          <li class='sub-menu'>
+                              <a href="/cp/news" data-toggle="dropdown">Sản phẩm</a>
+                              <ul class="sub">
+                                  <li>
+                                      <a href="/cp/products">Danh sách</a>
+                                  </li>
+                                  <li>
+                                      <a href="/cp/product/add">Thêm mới</a>
+                                  </li>
+                                  <li>
+                                      <a href="/cp/product/categories">Danh mục</a>
+                                  </li>
+                                  <li>
+                                      <a href="/cp/product/types">Phân loại</a>
+                                  </li>
+                                  <li>
+                                      <a href="/cp/product/comments">Bình luận</a>
+                                  </li>
+                                  <li>
+                                      <a href="/cp/product/brands">Thương hiệu</a>
+                                  </li>
+                                  <li>
+                                      <a href="/cp/product/filters">Các bộ lọc</a>
+                                  </li>
+
+                              </ul>
+                          </li>
+
+                          <li class='sub-menu'>
+                              <a href="javascript:;" data-toggle="dropdown">Kho hàng</a>
+                              <ul class="sub">
+                                  <li>
+                                      <a href="/cp/inventory/product">Sản phẩm kho</a>
+                                  </li>
+                                  <li>
+                                      <a href="/cp/inventory/import">Nhập kho</a>
+                                  </li>
+                                  <li>
+                                      <a href="/cp/inventory/catalogue">Danh mục kho</a>
+                                  </li>
+                              </ul>
+                          </li>
+
+                      </ul>
+                  </li>
+                  <!--multi level menu end-->
+              </ul>
+              <!-- sidebar menu end-->
+          </div>
+      </aside>
+      <!--sidebar end-->
+      <!--main content start-->
+      <section id="main-content">
+       <?php echo $content; ?>
+
+      </section>
+      <!--main content end-->
+      <!--footer start-->
+      <footer class="site-footer">
+          <div class="text-center">
+              2015 &copy; NOWEB.
+              <a href="javascript:;" class="go-top">
+                  <i class="icon-angle-up"></i>
+              </a>
+          </div>
+      </footer>
+      <!--footer end-->
+  </section>
+            <!-- js placed at the end of the document so the pages load faster -->
+    <script type="text/javascript" src="<?php echo $resources_path; ?>/js/jquery.customSelect.min.js" ></script>
+    <script type="text/javascript" src="<?php echo $resources_path; ?>/js/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="<?php echo $resources_path; ?>/assets/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+    <script type="text/javascript" src="<?php echo $resources_path; ?>/assets/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js"></script>
+    <script type="text/javascript" src="<?php echo $resources_path; ?>/assets/bootstrap-dialog/bootstrap-dialog.js"></script>
+    <!--common script for all pages-->
+    <script src="<?php echo $resources_path; ?>/js/common-scripts.js"></script>
+
+<div class="modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h4 class="modal-title">Modal title</h4>
+      </div>
+      <div class="modal-body">
+        <p>One fine body…</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+  </body>
+</html>

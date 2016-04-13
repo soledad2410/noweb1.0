@@ -1,0 +1,26 @@
+{
+    "name": "noweb/frontend",
+    "description": "Frontend package of noweb - client project",
+    "authors": [
+        {
+            "name": "ZL",
+            "email": "smtpwebmails@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "illuminate/support": "4.2.*"
+    },
+    "autoload": {
+        "classmap": [
+            "src/migrations",
+            "src/controllers",
+            "src/models",
+            "src/helpers"
+        ],
+        "psr-0": {
+            "Noweb\\Frontend\\": "src/"
+        }
+    },
+    "minimum-stability": "stable"
+}

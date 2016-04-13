@@ -1,0 +1,24 @@
+{
+    "name": "noweb/api",
+    "description": "",
+    "authors": [
+        {
+            "name": "ZL",
+            "email": "smtpwebmails@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "illuminate/support": "4.2.*"
+    },
+    "autoload": {
+        "classmap": [
+            "src/migrations",
+            "src/controllers"
+        ],
+        "psr-0": {
+            "Noweb\\Api\\": "src/"
+        }
+    },
+    "minimum-stability": "stable"
+}

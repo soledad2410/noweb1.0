@@ -1,0 +1,4 @@
+<h1>This's index page</h1>
+<?php if(Session::has('global')): ?>
+<p><?php echo Session::get('global'); ?></p>
+<?php endif; ?>

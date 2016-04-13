@@ -1,0 +1,25 @@
+<div class="list-news">
+    <?php foreach($news as $item): ?>
+    <div class="item row">
+        <h6><a href="<?php echo $url->get_news_url($item); ?>"><?php echo $item->name; ?></a></h6>
+        <div class="item-photo col-md-4">
+            <a href="<?php echo $url->get_news_url($item); ?>"><img width="172" src="<?php echo $url->get_thumbnail($item); ?>" alt=""></a>
+        </div>
+        <div class="item-caption col-md-8">
+            <p><?php echo $item->brief; ?></p>
+            <p class="readmore"><a href="<?php echo $url->get_news_url($item); ?>">Chi tiết &gt;&gt;</a></p>
+        </div>
+    </div>
+    <?php endforeach; ?>
+</div>
+<div class="row">
+    <div class="col-lg-5">
+        <div class="dataTables_info"> Hiển thị <strong><?php echo $range['from']; ?></strong> - <strong><?php echo $range['to']; ?></strong> / <strong><?php echo $range['totalRecord']; ?></strong> bản ghi</div>
+    </div>
+    <div class="page-navigation col-lg-7">
+        <div class="paging">
+            <?php echo $paginator; ?>
+
+        </div>
+    </div>
+</div>
